@@ -64,3 +64,10 @@ service nginx restart
 echo -e "\n--- Setting up Environment Variables ---\n"
 export HOME=$HOME
 export CODALAB_HOME=$CODALAB_HOME
+
+echo -e "\n--- Setting up Screens ---\n"
+cd $HOME/codalab-worksheets/codalab && screen -dmS website./manage runserver 127.0.0.1:2700
+cd $HOME/codalab-cli && screen -dmS XMLRPC codalab/bin/cl server
+cd $HOME/codalab-cli && screen -dmS REST codalab/bin/cl rest-server
+cd $HOME/codalab-cli && screen -dmS bundle_manager codalab/bin/cl bundle-manager
+cd $HOME && screen -dmS worker codalab-cli/worker/worker.sh --server http://localhost:2900 --password $CODALAB_HOME/root.password
