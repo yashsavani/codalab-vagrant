@@ -15,6 +15,11 @@ Vagrantfile and provisioning scripts to run a developer version of Codalab Works
 11. `cd /vagrant/codalab-worksheets/codalab && screen -dmS website ./manage runserver 127.0.0.1:2700`
 12. `cd /vagrant/codalab-cli && screen -dmS XMLRPC codalab/bin/cl server`
 13. `screen -dmS REST codalab/bin/cl rest-server`
-14. `screen -dmS bundle_manager codalab/bin/cl bundle_manager`
-15. `cd /vagrant && screen -dmS worker codalab-cli/worker/worker.sh --server http://localhost:2900 --password $CODALAB_HOME/root.password`
+14. `screen -dmS bundle_manager codalab/bin/cl bundle-manager`
+15. `cd /vagrant && screen -dmS worker codalab-cli/worker/worker.sh --server http://localhost:2900 --password /home/vagrant/.codalab/root.password`
 16. Visit http://localhost:4567
+17. Create a user account
+18. `vagrant ssh`
+19. `screen -x REST`
+20. visit the link provided
+21. Use Account to login
