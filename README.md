@@ -8,9 +8,9 @@ Vagrantfile and provisioning scripts to run a developer version of Codalab Works
 4. `vagrant up`
 5. `vagrant ssh`
 6. `cd /vagrant/ && bash setup_vagrant.sh`
-7. `cd /vagrant/ && run_servers.sh`
-16. Visit http://localhost:4567
-17. Create a user account
-19. `screen -x REST`
-20. visit the link provided
-21. Use Account to login
+7. `cd /vagrant/ && bash run_servers.sh`
+8. Visit http://localhost:4567
+9. Create a user account
+10. `screen -x REST`
+11. visit the link provided
+12. Use Account to login
